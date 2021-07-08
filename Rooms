@@ -1,5 +1,11 @@
 #!/usr/bin/python3
 
+    print("What's your name?" :")
+    name = input("> ")
+    
+    if name:
+        print('Welcome {name}')
+    else:
 
 
 questions = [('Question 1', 'Answer'),
@@ -35,5 +41,28 @@ while game_over == False:
         i += 1
     else:
         print('Wrong answer! Game over!')
-        
+
+
+rooms = {
+
+            'Room1' : {
+                  'item'  : 'key'
+                  'item'  : 'note'
+                  'item'  : 'book'
+                  'desc'  : 'You are in a room that appears to be a personal office, there is a large mahognay desk and leather chair. The windows have been covered and blacked out. The is one door, 
+
+                },
+
+            'Room2' : {
+                  'north' : 'Hall',
+                  'east'  : 'Dining Room',
+                  'south' : 'Garden',
+                  'west'  : 'Pantry',
+                  'item'  : 'monster',
+                },
+            'Room3' : {
+                  'south' : 'Dining Room',
+                  'west'  : 'Hall',
+                },
+
         game_over = True
