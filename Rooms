@@ -1,0 +1,39 @@
+#!/usr/bin/python3
+
+
+
+questions = [('Question 1', 'Answer'),
+             ('Question 2', 'Answer')
+    ]
+
+def showInstructions():
+    print('''
+Escpae Room Game
+OBJECTIVE: Escape from thress rooms and survive!
+--------
+Actions:
+    LOOK
+    READ [item]
+    GO [north]
+    GET [item, spell]
+    
+Type 'help' at any time! Type 'q' to quit!''')
+
+
+no_of_questions = len(questions)
+game_over = False
+i = 0
+
+while game_over == False:
+    
+    if i + 1 > no_of_questions:
+        print('You win!')
+        break
+    
+    if input(questions[i][0]) == questions[i][1]:
+        print('Correct!')
+        i += 1
+    else:
+        print('Wrong answer! Game over!')
+        
+        game_over = True
