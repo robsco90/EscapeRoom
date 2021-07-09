@@ -1,68 +1,57 @@
 #!/usr/bin/python3
+import os
 
-    print("What's your name?" :")
-    name = input("> ")
-    
-    if name:
-        print('Welcome {name}')
-    else:
+#Task 1
+print("You wake up in a dark room on a brown leather couch, you're certain how you got there.")
+print("'There must have been one too many Mai Tais'")
+print("You look around the room that appears to be an office.")
+print("There is a large mahognay desk and leather chair. Bookshelves line the the walls opposite one another.")
+print("There is only one door in the room. You happen to notice an envelope lying on the desk.")
+print("As you decide what to do next you hear the voice of the Waze navigation coming from some unknown source")
+print("'You have 5 minutes to leave the room before the poison gas is dispersed into the room'")
 
-
-questions = [('Question 1', 'Answer'),
-             ('Question 2', 'Answer')
-    ]
-
-def showInstructions():
-    print('''
-Escpae Room Game
-OBJECTIVE: Escape from thress rooms and survive!
---------
-Actions:
-    LOOK
-    READ [item]
-    GO [north]
-    GET [item, spell]
-    
-Type 'help' at any time! Type 'q' to quit!''')
-
-
-no_of_questions = len(questions)
-game_over = False
-i = 0
-
-while game_over == False:
-    
-    if i + 1 > no_of_questions:
-        print('You win!')
+# Task 1 Loop
+while True:
+    print("1: Do you want to open the envelope?")
+    print("2: Do you want to try the only door in the room?")
+    print("3: Do you want to just sit there?")
+    answer = input()
+    os.system("clear")
+    if answer == "1":
+        print("You open the envelope and read the note.", "Which appears to be a riddle")
         break
-    
-    if input(questions[i][0]) == questions[i][1]:
-        print('Correct!')
-        i += 1
+    elif answer == "2":
+        print("The door is locked and will not open")
+    elif answer == "3":
+        print("Time is wasting and you are getting no younger!")
     else:
-        print('Wrong answer! Game over!')
+        print("That's not an option, try something else.")
 
 
-rooms = {
+while True:
+    print("Opening the enevelope, you read the following question")
+    print("What Goes Through Towns And Over Hills And Never Moves?")
 
-            'Room1' : {
-                  'item'  : 'key'
-                  'item'  : 'note'
-                  'item'  : 'book'
-                  'desc'  : 'You are in a room that appears to be a personal office, there is a large mahognay desk and leather chair. The windows have been covered and blacked out. The is one door, 
+# Task 2
+    print("1: A Cloud")
+    print("2: A Road")
+    print("3: The Wind")
+    answer = input()
+    os.system("clear")
+    os.system("clear")
+    if answer == "1":
+        print("That is not the correct answer, try once more.")
+    elif answer == "2":
+        print("Correct!")
+        break
+    elif answer == "3":
+        print("That is not the correct answer, try once more.")
+    else:
+        print("That's not an option, try something else.")
 
-                },
+while True:
+    print("The voice tells you to locate a book of poems by Robert Frost")
+    print("Opening the book reveals another note falling out")
+    break
 
-            'Room2' : {
-                  'north' : 'Hall',
-                  'east'  : 'Dining Room',
-                  'south' : 'Garden',
-                  'west'  : 'Pantry',
-                  'item'  : 'monster',
-                },
-            'Room3' : {
-                  'south' : 'Dining Room',
-                  'west'  : 'Hall',
-                },
 
-        game_over = True
