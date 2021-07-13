@@ -78,10 +78,6 @@ def red_room() -> object:
             green_room()
 
 def green_room() -> object:
-    """
-
-    :rtype: object
-    """
     green_room_options = ["1", "2", "3"]
     user_choice = ""
     while user_choice not in green_room_options:
