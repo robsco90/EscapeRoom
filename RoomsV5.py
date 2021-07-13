@@ -1,8 +1,7 @@
 
-# Global imports
-import os
 
-The Escape room is a riddle based game, if you answer three questions in a row correctly, you win and escape. If you answer four questions in a row incorrectly you lose and are sent to a locker room to clean toe jam for a month. Best of luck to you!
+
+## The Escape room is a riddle based game, if you answer three questions in a row correctly, you win and escape. If you answer four questions in a row incorrectly you lose and are sent to a locker room to clean toe jam for a month. Best of luck to you!
 
 # Functions
 
