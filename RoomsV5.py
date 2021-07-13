@@ -28,10 +28,6 @@ def start_room():
         elif user_choice == start_room_options[2]:
             green_room()
 
-
-
-
-
 def blue_room():
     blue_room_options = ["1", "2", "3"]
     user_choice = ""
